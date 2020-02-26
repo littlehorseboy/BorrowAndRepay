@@ -13,8 +13,8 @@ namespace BorrowAndRepay
 
         public Person(string name, int money)
         {
-            this.Name = name;
-            this.Money = money;
+            Name = name;
+            Money = money;
         }
 
         public void borrow(Person lender, int money)
@@ -22,15 +22,15 @@ namespace BorrowAndRepay
             if (lender.Money >= money)
             {
                 lender.Money -= money;
-                this.Money += money;
+                Money += money;
             }
         }
 
         public void repay(Person lender, int money)
         {
-            if (this.Money >= money)
+            if (Money >= money)
             {
-                this.Money -= money;
+                Money -= money;
                 lender.Money += money;
             }
         }
