@@ -180,6 +180,7 @@
             this.borrowButton.TabIndex = 18;
             this.borrowButton.Text = "跟 XXX 借 $1000";
             this.borrowButton.UseVisualStyleBackColor = true;
+            this.borrowButton.Click += new System.EventHandler(this.borrowButton_Click);
             // 
             // repayButton
             // 
@@ -191,6 +192,7 @@
             this.repayButton.TabIndex = 19;
             this.repayButton.Text = "還給 XXX $1000";
             this.repayButton.UseVisualStyleBackColor = true;
+            this.repayButton.Click += new System.EventHandler(this.repayButton_Click);
             // 
             // Form1
             // 

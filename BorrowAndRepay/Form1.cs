@@ -28,8 +28,32 @@ namespace BorrowAndRepay
             friendNameInput.Enabled = false;
             submitButton.Enabled = false;
 
-            borrowButton.Enabled = false;
-            repayButton.Enabled = false;
+            myNameLabel.Text = i.Name;
+            friendNameLabel.Text = friend.Name;
+
+            borrowButton.Text = $"跟 {friend.Name} 借 $1000";
+            repayButton.Text = $"還給 {friend.Name} $1000";
+
+            borrowButton.Enabled = true;
+            repayButton.Enabled = true;
+        }
+
+        private void borrowButton_Click(object sender, EventArgs e)
+        {
+            i.borrow(friend, 1000);
+            this.updateMoney();
+        }
+
+        private void repayButton_Click(object sender, EventArgs e)
+        {
+            i.repay(friend, 1000);
+            this.updateMoney();
+        }
+
+        private void updateMoney()
+        {
+            myMoneyLabel.Text = i.Money.ToString();
+            friendMoneyLabel.Text = friend.Money.ToString();
         }
     }
 }
