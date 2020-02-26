@@ -162,12 +162,13 @@
             // submitButton
             // 
             this.submitButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.submitButton.Location = new System.Drawing.Point(524, 43);
+            this.submitButton.Location = new System.Drawing.Point(508, 43);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(162, 74);
+            this.submitButton.Size = new System.Drawing.Size(178, 74);
             this.submitButton.TabIndex = 17;
             this.submitButton.Text = "確認";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // borrowButton
             // 
