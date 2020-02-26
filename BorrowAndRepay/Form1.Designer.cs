@@ -125,9 +125,9 @@
             this.friendMoneyLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.friendMoneyLabel.Location = new System.Drawing.Point(530, 216);
             this.friendMoneyLabel.Name = "friendMoneyLabel";
-            this.friendMoneyLabel.Size = new System.Drawing.Size(63, 20);
+            this.friendMoneyLabel.Size = new System.Drawing.Size(54, 20);
             this.friendMoneyLabel.TabIndex = 16;
-            this.friendMoneyLabel.Text = "200000";
+            this.friendMoneyLabel.Text = "10000";
             // 
             // friendNameLabel
             // 

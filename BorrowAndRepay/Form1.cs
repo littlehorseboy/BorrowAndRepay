@@ -22,7 +22,7 @@ namespace BorrowAndRepay
         private void submitButton_Click(object sender, EventArgs e)
         {
             i = new Person(myNameInput.Text, 0);
-            friend = new Person(friendNameInput.Text, 200000);
+            friend = new Person(friendNameInput.Text, 10000);
 
             myNameInput.Enabled = false;
             friendNameInput.Enabled = false;

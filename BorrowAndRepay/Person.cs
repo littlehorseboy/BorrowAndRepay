@@ -19,14 +19,20 @@ namespace BorrowAndRepay
 
         public void borrow(Person lender, int money)
         {
-            lender.Money -= money;
-            this.Money += money;
+            if (lender.Money >= money)
+            {
+                lender.Money -= money;
+                this.Money += money;
+            }
         }
-        
+
         public void repay(Person lender, int money)
         {
-            this.Money -= money;
-            lender.Money += money;
+            if (this.Money >= money)
+            {
+                this.Money -= money;
+                lender.Money += money;
+            }
         }
     }
 }
