@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.myNameInput = new System.Windows.Forms.TextBox();
+            this.friendNameInput = new System.Windows.Forms.TextBox();
+            this.myMoneyLabel = new System.Windows.Forms.Label();
+            this.myNameLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.friendMoneyLabel = new System.Windows.Forms.Label();
+            this.friendNameLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.borrowButton = new System.Windows.Forms.Button();
+            this.repayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,39 +65,39 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "請輸入朋友的名字：";
             // 
-            // textBox1
+            // myNameInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 25);
-            this.textBox1.TabIndex = 2;
+            this.myNameInput.Location = new System.Drawing.Point(259, 43);
+            this.myNameInput.Name = "myNameInput";
+            this.myNameInput.Size = new System.Drawing.Size(182, 25);
+            this.myNameInput.TabIndex = 2;
             // 
-            // textBox2
+            // friendNameInput
             // 
-            this.textBox2.Location = new System.Drawing.Point(259, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 25);
-            this.textBox2.TabIndex = 3;
+            this.friendNameInput.Location = new System.Drawing.Point(259, 92);
+            this.friendNameInput.Name = "friendNameInput";
+            this.friendNameInput.Size = new System.Drawing.Size(182, 25);
+            this.friendNameInput.TabIndex = 3;
             // 
-            // label6
+            // myMoneyLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(190, 216);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "0";
+            this.myMoneyLabel.AutoSize = true;
+            this.myMoneyLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.myMoneyLabel.Location = new System.Drawing.Point(190, 216);
+            this.myMoneyLabel.Name = "myMoneyLabel";
+            this.myMoneyLabel.Size = new System.Drawing.Size(18, 20);
+            this.myMoneyLabel.TabIndex = 12;
+            this.myMoneyLabel.Text = "0";
             // 
-            // label5
+            // myNameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(190, 178);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "無名氏";
+            this.myNameLabel.AutoSize = true;
+            this.myNameLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.myNameLabel.Location = new System.Drawing.Point(190, 178);
+            this.myNameLabel.Name = "myNameLabel";
+            this.myNameLabel.Size = new System.Drawing.Size(69, 20);
+            this.myNameLabel.TabIndex = 11;
+            this.myNameLabel.Text = "無名氏";
             // 
             // label4
             // 
@@ -119,25 +119,25 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "我的名字：";
             // 
-            // label7
+            // friendMoneyLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(530, 216);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "200000";
+            this.friendMoneyLabel.AutoSize = true;
+            this.friendMoneyLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.friendMoneyLabel.Location = new System.Drawing.Point(530, 216);
+            this.friendMoneyLabel.Name = "friendMoneyLabel";
+            this.friendMoneyLabel.Size = new System.Drawing.Size(63, 20);
+            this.friendMoneyLabel.TabIndex = 16;
+            this.friendMoneyLabel.Text = "200000";
             // 
-            // label8
+            // friendNameLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(530, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "無名氏";
+            this.friendNameLabel.AutoSize = true;
+            this.friendNameLabel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.friendNameLabel.Location = new System.Drawing.Point(530, 178);
+            this.friendNameLabel.Name = "friendNameLabel";
+            this.friendNameLabel.Size = new System.Drawing.Size(69, 20);
+            this.friendNameLabel.TabIndex = 15;
+            this.friendNameLabel.Text = "無名氏";
             // 
             // label9
             // 
@@ -159,56 +159,56 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "朋友的名字：";
             // 
-            // button1
+            // submitButton
             // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(524, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 74);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "確認";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.submitButton.Location = new System.Drawing.Point(524, 43);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(162, 74);
+            this.submitButton.TabIndex = 17;
+            this.submitButton.Text = "確認";
+            this.submitButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // borrowButton
             // 
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(47, 272);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(639, 53);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "跟 XXX 借 $1000";
-            this.button2.UseVisualStyleBackColor = true;
+            this.borrowButton.Enabled = false;
+            this.borrowButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.borrowButton.Location = new System.Drawing.Point(47, 272);
+            this.borrowButton.Name = "borrowButton";
+            this.borrowButton.Size = new System.Drawing.Size(639, 53);
+            this.borrowButton.TabIndex = 18;
+            this.borrowButton.Text = "跟 XXX 借 $1000";
+            this.borrowButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // repayButton
             // 
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(47, 347);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(639, 53);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "還給 XXX $1000";
-            this.button3.UseVisualStyleBackColor = true;
+            this.repayButton.Enabled = false;
+            this.repayButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.repayButton.Location = new System.Drawing.Point(47, 347);
+            this.repayButton.Name = "repayButton";
+            this.repayButton.Size = new System.Drawing.Size(639, 53);
+            this.repayButton.TabIndex = 19;
+            this.repayButton.Text = "還給 XXX $1000";
+            this.repayButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.repayButton);
+            this.Controls.Add(this.borrowButton);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.friendMoneyLabel);
+            this.Controls.Add(this.friendNameLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.myMoneyLabel);
+            this.Controls.Add(this.myNameLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.friendNameInput);
+            this.Controls.Add(this.myNameInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -222,19 +222,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox myNameInput;
+        private System.Windows.Forms.TextBox friendNameInput;
+        private System.Windows.Forms.Label myMoneyLabel;
+        private System.Windows.Forms.Label myNameLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label friendMoneyLabel;
+        private System.Windows.Forms.Label friendNameLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Button borrowButton;
+        private System.Windows.Forms.Button repayButton;
     }
 }
 
