@@ -33,7 +33,7 @@ namespace BorrowAndRepayUnitTestProject
         public void IBorrowFromFriendTenThousand()
         {
             InitClass();
-            XiaoMing.borrow(XiaoHua, 10000);
+            XiaoMing.Borrow(XiaoHua, 10000);
             Assert.AreEqual(XiaoMing.Money, 10000);
             Assert.AreEqual(XiaoHua.Money, 0);
         }
@@ -42,8 +42,8 @@ namespace BorrowAndRepayUnitTestProject
         public void IRepayForFriendTenThousand()
         {
             InitClass();
-            XiaoMing.borrow(XiaoHua, 10000);
-            XiaoMing.repay(XiaoHua, 10000);
+            XiaoMing.Borrow(XiaoHua, 10000);
+            XiaoMing.Repay(XiaoHua, 10000);
             Assert.AreEqual(XiaoMing.Money, 0);
             Assert.AreEqual(XiaoHua.Money, 10000);
         }
@@ -52,7 +52,7 @@ namespace BorrowAndRepayUnitTestProject
         public void IBorrowFromFriendOverload()
         {
             InitClass();
-            XiaoMing.borrow(XiaoHua, 9999999);
+            XiaoMing.Borrow(XiaoHua, 9999999);
             Assert.AreEqual(XiaoMing.Money, 0);
             Assert.AreEqual(XiaoHua.Money, 10000);
         }
@@ -61,7 +61,7 @@ namespace BorrowAndRepayUnitTestProject
         public void IRepayForFriendOverload()
         {
             InitClass();
-            XiaoMing.repay(XiaoHua, 9999999);
+            XiaoMing.Repay(XiaoHua, 9999999);
             Assert.AreEqual(XiaoMing.Money, 0);
             Assert.AreEqual(XiaoHua.Money, 10000);
         }

@@ -17,7 +17,7 @@ namespace BorrowAndRepay
             Money = money;
         }
 
-        public void borrow(Person lender, int money)
+        public void Borrow(Person lender, int money)
         {
             if (lender.Money >= money)
             {
@@ -26,7 +26,7 @@ namespace BorrowAndRepay
             }
         }
 
-        public void repay(Person lender, int money)
+        public void Repay(Person lender, int money)
         {
             if (Money >= money)
             {

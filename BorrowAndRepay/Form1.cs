@@ -40,13 +40,13 @@ namespace BorrowAndRepay
 
         private void borrowButton_Click(object sender, EventArgs e)
         {
-            i.borrow(friend, 1000);
+            i.Borrow(friend, 1000);
             this.updateMoney();
         }
 
         private void repayButton_Click(object sender, EventArgs e)
         {
-            i.repay(friend, 1000);
+            i.Repay(friend, 1000);
             this.updateMoney();
         }
 
