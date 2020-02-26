@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BorrowAndRepay
 {
-    class Person
+    public class Person
     {
         public string Name;
         public int Money;
