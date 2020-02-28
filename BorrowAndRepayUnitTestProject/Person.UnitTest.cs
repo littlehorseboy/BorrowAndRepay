@@ -9,6 +9,7 @@ namespace BorrowAndRepayUnitTestProject
         Person XiaoMing;
         Person XiaoHua;
 
+        [TestInitializeAttribute]
         public void InitClass()
         {
             XiaoMing = new Person("¤p©ú", 0);
@@ -18,21 +19,18 @@ namespace BorrowAndRepayUnitTestProject
         [TestMethod]
         public void XiaoMingMoneyZero()
         {
-            InitClass();
             Assert.AreEqual(XiaoMing.Money, 0);
         }
 
         [TestMethod]
         public void XiaoHuaMoneyTenThousand()
         {
-            InitClass();
             Assert.AreEqual(XiaoHua.Money, 10000);
         }
         
         [TestMethod]
         public void XiaoMingBorrowFromXiaoHuaTenThousand()
         {
-            InitClass();
             XiaoMing.Borrow(XiaoHua, 10000);
             Assert.AreEqual(XiaoMing.Money, 10000);
             Assert.AreEqual(XiaoHua.Money, 0);
@@ -41,7 +39,6 @@ namespace BorrowAndRepayUnitTestProject
         [TestMethod]
         public void XiaoMingRepayForXiaoHuaTenThousand()
         {
-            InitClass();
             XiaoMing.Borrow(XiaoHua, 10000);
             XiaoMing.Repay(XiaoHua, 10000);
             Assert.AreEqual(XiaoMing.Money, 0);
@@ -51,7 +48,6 @@ namespace BorrowAndRepayUnitTestProject
         [TestMethod]
         public void XiaoMingBorrowFromXiaoHuaOverload()
         {
-            InitClass();
             XiaoMing.Borrow(XiaoHua, 9999999);
             Assert.AreEqual(XiaoMing.Money, 0);
             Assert.AreEqual(XiaoHua.Money, 10000);
@@ -60,7 +56,6 @@ namespace BorrowAndRepayUnitTestProject
         [TestMethod]
         public void XiaoMingRepayForXiaoHuaOverload()
         {
-            InitClass();
             XiaoMing.Repay(XiaoHua, 9999999);
             Assert.AreEqual(XiaoMing.Money, 0);
             Assert.AreEqual(XiaoHua.Money, 10000);
