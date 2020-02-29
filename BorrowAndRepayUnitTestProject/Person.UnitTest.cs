@@ -9,7 +9,7 @@ namespace BorrowAndRepayUnitTestProject
         Person XiaoMing;
         Person XiaoHua;
 
-        [TestInitializeAttribute]
+        [TestInitialize]
         public void InitClass()
         {
             XiaoMing = new Person("¤p©ú", 0);
