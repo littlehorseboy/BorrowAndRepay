@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace BorrowAndRepay
 {
-    public partial class Form1 : Form
+    public partial class BorrowRepay : Form
     {
         Person i, friend;
 
-        public Form1()
+        public BorrowRepay()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace BorrowAndRepay
 {
-    partial class Form1
+    partial class BorrowRepay
     {
         /// <summary>
         /// 設計工具所需的變數。
