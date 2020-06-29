@@ -19,21 +19,21 @@ namespace BorrowAndRepayUnitTestProject
         [TestMethod]
         public void XiaoMingMoneyZero()
         {
-            Assert.AreEqual(XiaoMing.Money, 0);
+            Assert.AreEqual(XiaoMing.money, 0);
         }
 
         [TestMethod]
         public void XiaoHuaMoneyTenThousand()
         {
-            Assert.AreEqual(XiaoHua.Money, 10000);
+            Assert.AreEqual(XiaoHua.money, 10000);
         }
         
         [TestMethod]
         public void XiaoMingBorrowFromXiaoHuaTenThousand()
         {
             XiaoMing.Borrow(XiaoHua, 10000);
-            Assert.AreEqual(XiaoMing.Money, 10000);
-            Assert.AreEqual(XiaoHua.Money, 0);
+            Assert.AreEqual(XiaoMing.money, 10000);
+            Assert.AreEqual(XiaoHua.money, 0);
         }
 
         [TestMethod]
@@ -41,24 +41,24 @@ namespace BorrowAndRepayUnitTestProject
         {
             XiaoMing.Borrow(XiaoHua, 10000);
             XiaoMing.Repay(XiaoHua, 10000);
-            Assert.AreEqual(XiaoMing.Money, 0);
-            Assert.AreEqual(XiaoHua.Money, 10000);
+            Assert.AreEqual(XiaoMing.money, 0);
+            Assert.AreEqual(XiaoHua.money, 10000);
         }
 
         [TestMethod]
         public void XiaoMingBorrowFromXiaoHuaOverload()
         {
             XiaoMing.Borrow(XiaoHua, 9999999);
-            Assert.AreEqual(XiaoMing.Money, 0);
-            Assert.AreEqual(XiaoHua.Money, 10000);
+            Assert.AreEqual(XiaoMing.money, 0);
+            Assert.AreEqual(XiaoHua.money, 10000);
         }
 
         [TestMethod]
         public void XiaoMingRepayForXiaoHuaOverload()
         {
             XiaoMing.Repay(XiaoHua, 9999999);
-            Assert.AreEqual(XiaoMing.Money, 0);
-            Assert.AreEqual(XiaoHua.Money, 10000);
+            Assert.AreEqual(XiaoMing.money, 0);
+            Assert.AreEqual(XiaoHua.money, 10000);
         }
     }
 }

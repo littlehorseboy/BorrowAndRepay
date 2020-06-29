@@ -12,9 +12,9 @@ namespace BorrowAndRepay
 {
     public partial class BorrowRepay : Form
     {
-        Person i, friend;
+        Person me, friend;
         readonly int myMoney = 0;
-        readonly int friendMomney = 10000;
+        readonly int friendMoney = 10000;
         readonly int borrowMoney = 1000;
 
         public BorrowRepay()
@@ -24,16 +24,16 @@ namespace BorrowAndRepay
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            i = new Person(myNameInput.Text, myMoney);
-            friend = new Person(friendNameInput.Text, friendMomney);
+            me = new Person(myNameInput.Text, myMoney);
+            friend = new Person(friendNameInput.Text, friendMoney);
 
             setEnabled();
 
-            myNameLabel.Text = i.Name;
-            friendNameLabel.Text = friend.Name;
+            myNameLabel.Text = me.name;
+            friendNameLabel.Text = friend.name;
 
-            borrowButton.Text = $"跟 {friend.Name} 借 ${borrowMoney.ToString()}";
-            repayButton.Text = $"還給 {friend.Name} ${borrowMoney.ToString()}";
+            borrowButton.Text = $"跟 {friend.name} 借 ${borrowMoney.ToString()}";
+            repayButton.Text = $"還給 {friend.name} ${borrowMoney.ToString()}";
         }
 
         private void setEnabled()
@@ -59,20 +59,20 @@ namespace BorrowAndRepay
 
         private void BorrowButton_Click(object sender, EventArgs e)
         {
-            i.Borrow(friend, borrowMoney);
+            me.Borrow(friend, borrowMoney);
             this.UpdateMoney();
         }
 
         private void RepayButton_Click(object sender, EventArgs e)
         {
-            i.Repay(friend, borrowMoney);
+            me.Repay(friend, borrowMoney);
             this.UpdateMoney();
         }
 
         private void UpdateMoney()
         {
-            myMoneyLabel.Text = i.Money.ToString();
-            friendMoneyLabel.Text = friend.Money.ToString();
+            myMoneyLabel.Text = me.money.ToString();
+            friendMoneyLabel.Text = friend.money.ToString();
         }
     }
 }

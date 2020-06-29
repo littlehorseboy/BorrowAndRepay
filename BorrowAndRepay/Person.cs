@@ -8,30 +8,30 @@ namespace BorrowAndRepay
 {
     public class Person
     {
-        public string Name;
-        public int Money;
+        public string name;
+        public int money;
 
         public Person(string name, int money)
         {
-            Name = name;
-            Money = money;
+            this.name = name;
+            this.money = money;
         }
 
         public void Borrow(Person lender, int money)
         {
-            if (lender.Money >= money)
+            if (lender.money >= money)
             {
-                lender.Money -= money;
-                Money += money;
+                lender.money -= money;
+                this.money += money;
             }
         }
 
         public void Repay(Person lender, int money)
         {
-            if (Money >= money)
+            if (this.money >= money)
             {
-                Money -= money;
-                lender.Money += money;
+                this.money -= money;
+                lender.money += money;
             }
         }
     }
