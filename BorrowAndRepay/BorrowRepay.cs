@@ -13,44 +13,63 @@ namespace BorrowAndRepay
     public partial class BorrowRepay : Form
     {
         Person i, friend;
+        readonly int myMoney = 0;
+        readonly int friendMomney = 10000;
+        readonly int borrowMoney = 1000;
 
         public BorrowRepay()
         {
             InitializeComponent();
         }
 
-        private void submitButton_Click(object sender, EventArgs e)
+        private void SubmitButton_Click(object sender, EventArgs e)
         {
-            i = new Person(myNameInput.Text, 0);
-            friend = new Person(friendNameInput.Text, 10000);
+            i = new Person(myNameInput.Text, myMoney);
+            friend = new Person(friendNameInput.Text, friendMomney);
 
-            myNameInput.Enabled = false;
-            friendNameInput.Enabled = false;
-            submitButton.Enabled = false;
+            setEnabled();
 
             myNameLabel.Text = i.Name;
             friendNameLabel.Text = friend.Name;
 
-            borrowButton.Text = $"跟 {friend.Name} 借 $1000";
-            repayButton.Text = $"還給 {friend.Name} $1000";
-
-            borrowButton.Enabled = true;
-            repayButton.Enabled = true;
+            borrowButton.Text = $"跟 {friend.Name} 借 ${borrowMoney.ToString()}";
+            repayButton.Text = $"還給 {friend.Name} ${borrowMoney.ToString()}";
         }
 
-        private void borrowButton_Click(object sender, EventArgs e)
+        private void setEnabled()
         {
-            i.Borrow(friend, 1000);
-            this.updateMoney();
+            foreach (Control control in this.Controls)
+            {
+                if (control.Tag == null)
+                {
+                    continue;
+                }
+
+                if (control.Tag.ToString() == "namesForm")
+                {
+                    control.Enabled = false;
+                }
+
+                if (control.Tag.ToString() == "borrowButtons")
+                {
+                    control.Enabled = true;
+                }
+            }
         }
 
-        private void repayButton_Click(object sender, EventArgs e)
+        private void BorrowButton_Click(object sender, EventArgs e)
         {
-            i.Repay(friend, 1000);
-            this.updateMoney();
+            i.Borrow(friend, borrowMoney);
+            this.UpdateMoney();
         }
 
-        private void updateMoney()
+        private void RepayButton_Click(object sender, EventArgs e)
+        {
+            i.Repay(friend, borrowMoney);
+            this.UpdateMoney();
+        }
+
+        private void UpdateMoney()
         {
             myMoneyLabel.Text = i.Money.ToString();
             friendMoneyLabel.Text = friend.Money.ToString();

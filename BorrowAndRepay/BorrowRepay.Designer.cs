@@ -71,6 +71,7 @@
             this.myNameInput.Name = "myNameInput";
             this.myNameInput.Size = new System.Drawing.Size(182, 25);
             this.myNameInput.TabIndex = 2;
+            this.myNameInput.Tag = "namesForm";
             // 
             // friendNameInput
             // 
@@ -78,6 +79,7 @@
             this.friendNameInput.Name = "friendNameInput";
             this.friendNameInput.Size = new System.Drawing.Size(182, 25);
             this.friendNameInput.TabIndex = 3;
+            this.friendNameInput.Tag = "namesForm";
             // 
             // myMoneyLabel
             // 
@@ -166,9 +168,10 @@
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(178, 74);
             this.submitButton.TabIndex = 17;
+            this.submitButton.Tag = "namesForm";
             this.submitButton.Text = "確認";
             this.submitButton.UseVisualStyleBackColor = true;
-            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // borrowButton
             // 
@@ -176,11 +179,12 @@
             this.borrowButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.borrowButton.Location = new System.Drawing.Point(47, 272);
             this.borrowButton.Name = "borrowButton";
-            this.borrowButton.Size = new System.Drawing.Size(639, 53);
+            this.borrowButton.Size = new System.Drawing.Size(639, 45);
             this.borrowButton.TabIndex = 18;
+            this.borrowButton.Tag = "borrowButtons";
             this.borrowButton.Text = "跟 XXX 借 $1000";
             this.borrowButton.UseVisualStyleBackColor = true;
-            this.borrowButton.Click += new System.EventHandler(this.borrowButton_Click);
+            this.borrowButton.Click += new System.EventHandler(this.BorrowButton_Click);
             // 
             // repayButton
             // 
@@ -188,13 +192,14 @@
             this.repayButton.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.repayButton.Location = new System.Drawing.Point(47, 347);
             this.repayButton.Name = "repayButton";
-            this.repayButton.Size = new System.Drawing.Size(639, 53);
+            this.repayButton.Size = new System.Drawing.Size(639, 45);
             this.repayButton.TabIndex = 19;
+            this.repayButton.Tag = "borrowButtons";
             this.repayButton.Text = "還給 XXX $1000";
             this.repayButton.UseVisualStyleBackColor = true;
-            this.repayButton.Click += new System.EventHandler(this.repayButton_Click);
+            this.repayButton.Click += new System.EventHandler(this.RepayButton_Click);
             // 
-            // Form1
+            // BorrowRepay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +219,7 @@
             this.Controls.Add(this.myNameInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "BorrowRepay";
             this.Text = "借還錢程式";
             this.ResumeLayout(false);
             this.PerformLayout();
